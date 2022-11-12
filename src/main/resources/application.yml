@@ -11,9 +11,6 @@ spring:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
-      output:
-        ansi:
-            enabled: always
       
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
@@ -29,6 +26,10 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
       
+  output:
+     ansi:
+         enabled: always
+
   servlet:
     multipart:
       enabled: true

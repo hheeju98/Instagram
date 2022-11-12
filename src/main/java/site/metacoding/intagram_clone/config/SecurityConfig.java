@@ -12,6 +12,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
+        http.csrf().disable(); // CSRF토큰 검사를 비활성화 한다.
+
         http.authorizeRequests() // 이주소로 요청이 들어오면
                 .antMatchers("/", "/user/**", "/image/**", "/subscribe/**", "/comment/**")
                 .authenticated() // 인증이 필요하다.
